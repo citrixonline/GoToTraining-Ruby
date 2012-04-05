@@ -1,9 +1,0 @@
---- 
-cursor_positions: 
-  - :path: lib/go_to_training.rb
-    :cursor_offset: 80
-    :timestamp: 2012-04-05 08:55:07 -07:00
-  - :path: Gemfile
-    :cursor_offset: 0
-    :timestamp: 2012-04-05 08:55:07 -07:00
-files_to_retain: 0
