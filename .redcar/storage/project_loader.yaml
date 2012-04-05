@@ -1,0 +1,4 @@
+--- 
+open_files: 
+  - lib/go_to_training.rb
+  - Gemfile
