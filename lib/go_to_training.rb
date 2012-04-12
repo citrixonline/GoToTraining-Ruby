@@ -7,7 +7,7 @@ require "go_to_training/registrants"
 require "go_to_training/organizers"
 
 module GoToTraining
-  class API
+  class Client
     
     include HTTParty
     format :json

@@ -5,7 +5,7 @@ class RegistrantsTest < Test::Unit::TestCase
   context "methods" do
 
     setup do
-      @c = GoToTraining::API.new("12345", "121212", "54321")
+      @c = GoToTraining::Client.new("12345", "121212", "54321")
     end
 
     should "valid cancel registration" do

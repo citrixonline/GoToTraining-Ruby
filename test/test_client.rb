@@ -1,11 +1,11 @@
 require 'helper'
 
-class APITest < Test::Unit::TestCase
+class ClientTest < Test::Unit::TestCase
 
   context "attributes" do
 
     setup do
-      @c = GoToTraining::API.new("12345", "121212", "54321")
+      @c = GoToTraining::Client.new("12345", "121212", "54321")
     end
 
     should "have access_token is set" do

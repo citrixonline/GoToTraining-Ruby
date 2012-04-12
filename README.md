@@ -20,7 +20,7 @@ For now you will need to install from source.
 
 Please refer to the [developer documentation](https://developer.citrixonline.com/api-overview/gototraining-rest-api) for a complete list of available methods. 
 
-	@g2t = GoToTraining::API.new(oauth_access_token, account_key, organizer_key) 
+	@g2t = GoToTraining::Client.new(oauth_access_token, account_key, organizer_key) 
 	@g2t.get_trainings
 
 ##Status
