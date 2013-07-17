@@ -5,7 +5,7 @@ class TrainingsTest < Test::Unit::TestCase
   context "methods" do
 
     setup do
-      @c = GoToTraining::Client.new("12345", "121212", "54321")
+      @client = GoToTraining::Client.new("12345", "121212", "54321")
     end
 
     should "valid create training" do
@@ -23,11 +23,20 @@ class TrainingsTest < Test::Unit::TestCase
     should "valid get training" do 
       assert true
     end
-    
-    should "valid get trainings" do 
-      assert true
+
+    should "valid get trainings" do
+      FakeWeb.register_uri(:get,
+         "https://api.citrixonline.com/G2T/rest/organizers/54321/trainings",
+         :body => '[{"trainingKey":"12345"}]',
+         :content_type => "application/json",
+         :status => ["200", "OK"])
+
+      result = @client.get_trainings
+      assert_not_nil result
+      assert result.is_a?(Array)
+      assert_not_nil result.first["trainingKey"]
     end
-    
+
     should "valid update training name and description" do 
       assert true
     end

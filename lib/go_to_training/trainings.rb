@@ -17,7 +17,7 @@ module GoToTraining
       self.class.get("trainings/#{training_key}").parsed_response
     end
     
-    def get_trainings(training_key)
+    def get_trainings
       self.class.get("trainings").parsed_response
     end
     
